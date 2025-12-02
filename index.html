@@ -28,7 +28,26 @@
                         <li><a class="nav-text text-light" href="#">Отзывы</a></li>
                         <li><a class="nav-text text-light" href="#">О компании</a></li>
         </ul>
-            <button type="button" class="nav-number">Заказать</button>
+<button type="button" class="nav-number" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  заказать
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Номер для связи</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <a class="call-us" href="tel:+7 927 271 1199">+7 927 271 1199</a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
                 </nav>
             </div>
         </div>

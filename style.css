@@ -83,3 +83,32 @@ margin-bottom: 10px;
 -moz-box-shadow: 0px 1px 14px 1px rgba(253, 253, 253, 0.2);
 box-shadow: 0px 1px 14px 1px rgba(253, 253, 253, 0.2);
 }
+
+.modal-header{
+    background-color: white;
+}
+
+.modal-body{
+    background-color: white;
+}
+
+.modal-title{
+    background-color: white;
+}
+
+.call-us{
+    background-color: white;
+}
+
+.modal{
+    background-color: transparent;
+}
+
+.btn-secondary{
+    background-color: #212529 !important;
+    transition: background-color 0.3s ease-in-out !important;
+}
+
+.btn-secondary:hover{
+    background-color: gray !important;
+}

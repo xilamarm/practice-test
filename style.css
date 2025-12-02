@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
     background-color: #212529;
+}
+
+body{
     overflow-x: hidden;
 }
 
@@ -52,6 +55,14 @@
 
 .dropdown-item:hover::after{
     width: 100%;
+}
+
+.dropdown-toggle::after{
+    transition: transform 0.1s ease-in-out;
+}
+
+.dropdown-toggle:focus:after{
+    transform: rotate(-90deg);
 }
 
 .nav-number{

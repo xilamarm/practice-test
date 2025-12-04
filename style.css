@@ -5,7 +5,9 @@
     background-color: #212529;
 }
 
+html,
 body{
+    width: 100%;
     overflow-x: hidden;
 }
 
@@ -22,7 +24,6 @@ header, section, main{
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    flex-wrap: nowrap !important;
 }
 
 .margin-left-20{
@@ -133,7 +134,7 @@ box-shadow: 0px 1px 14px 1px rgba(253, 253, 253, 0.2);
 }
 
 .carousel-control-prev-icon{
-    background-image: url(img/main/Vector\ left.svg) !important;
+   background-image: url(img/main/Vector\ left.svg) !important;
    background-color: #FF6200 !important;
    border-radius: 5px;
 }
@@ -141,4 +142,25 @@ box-shadow: 0px 1px 14px 1px rgba(253, 253, 253, 0.2);
 .carousel{
     display: flex;
     justify-content: center;
+}
+
+
+.card {
+    background-color: #FF6200;
+}
+
+.card-body {
+    padding: 10px 0px;
+    color: white;
+    background-color: #FF6200;
+}
+
+.card-body p {
+    font-size: 1.3rem;
+}
+
+.card-body p,
+.card-body a{
+    color: white;
+    background-color: #FF6200;
 }

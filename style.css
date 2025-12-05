@@ -2,6 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Tahoma, Verdana, sans-serif;
+
 }
 
 html,
@@ -46,7 +48,7 @@ main {
 .nav-text {
     margin: 0px 15px !important;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 24px
 }
 
 .dropdown-item {
@@ -85,8 +87,8 @@ main {
     border: none;
     color: white;
     transition: all 0.3s ease-in-out;
-    margin-right: 20px;
-    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: center;
 }
 
 .nav-number:hover {

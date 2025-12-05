@@ -177,7 +177,7 @@ main {
     font-size: 1.2rem;
 }
 
-.card-body a {
+.card-body a {  
     font-size: 1rem;
 }
 
@@ -276,4 +276,24 @@ main {
 
 .card-img, .card-img-top{
     border-radius: 0;
+}
+
+.padding-advantage {
+    padding-bottom: 50px;
+}
+
+.advantage-item {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    gap: 5px;
+}
+
+.img-advantage {
+    width: 2rem;
+    padding-bottom: 5px;
+}
+
+.card-advantages a{
+    text-decoration: none;
 }

@@ -1,7 +1,12 @@
 @font-face {
     font-family: Quicksand;
-    src: url(font/quicksand)
-}/* potom */
+    src: url(font/Quicksand/Quicksand-VariableFont_wght.ttf)
+}
+
+@font-face {
+    font-family: Saira-bold;
+    src: url(font/Saira/Saira-VariableFont_wdth\,wght.ttf);
+}
 
 * {
     padding: 0;
@@ -14,6 +19,7 @@ body {
     width: 100%;
     overflow-x: hidden;
     background-color: #212529;
+    font-family: Quicksand !important;
 }
 
 .fix {
@@ -60,13 +66,34 @@ a {
 
 .nav-text {
     font-size: var(--default-a);
+    cursor: pointer;
+}
+
+.user-none {
+    user-select: none;
+    cursor: default;
 }
 
 .header {
-    height: 600px;
-    background-size: 100%;
+    position: relative;
+    width: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     background-image: url(img/header/64b90821a7033\ \(1\)\ 1.png);
+    z-index: 1;
+    min-height: 600px;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-three);
+    width: 30%;
+    height: 100%;
+    opacity: 0.8;
 }
 
 

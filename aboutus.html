@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!--h2-главные заголовки
+    h4-для дефолтного использования
+-->
+
+<body>
+    <header class="header">
+        <div class="container margin-left-20">
+            <div class="row">
+                <img src="img/logo/лого3(переделка) 1.svg" alt="" class="logo">
+                <nav class="navbar w-75">
+                    <ul class="nav">
+                        <li><a class="nav-text text-light" href="index.html">Главная</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-text dropdown-toggle text-light" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Каталог
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Диваны</a></li>
+                                <li><a class="dropdown-item" href="#">Кухни</a></li>
+                                <li><a class="dropdown-item" href="#">Шкафы</a></li>
+                                <li><a class="dropdown-item" href="#">Прихожие</a></li>
+                            </ul>
+                        <li><a class="nav-text text-light" href="#">Отзывы</a></li>
+                        <li><a class="nav-text text-light" href="aboutus.html">О компании</a></li>
+                    </ul>
+                    <button type="button" class="nav-number" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        заказать
+                    </button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Номер для связи</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <a class="call-us" href="tel:+7 927 271 1199">+7 927 271 1199</a>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="image_www">
+            <img src="img/sec page/как работаем.png" alt="">
+        </div>
+    </main>
+    <section>
+        <div class="container">
+            <h2 class="text-light title-we-best">Почему мы лучшие</h2>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h2 class="text-light title-client">Что заказывали клиенты</h2>
+            <div class="row mt-5 wrap-client_buy">
+                <div class="text-client">
+                    <h2 class="text-client-one mb-0 text-light">За те годы которые мы на
+                        рынке мы сделали так как
+                        хочет клиент.</h2>
+                    <h2 class="text-client-two mb-0 text-light">А главное мы отточили навык: слышать и
+                        воплощать. Ваша идея + наша
+                        экспертиза = идеальный
+                        результат, как на этих фото.</h2>
+                </div>
+                <section class="carousel carousel-second">
+                    <div id="carouselExampleAutoplaying" class="carousel slide w-50" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/sec page/carousel/1.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/sec page/carousel/2.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/sec page/carousel/3.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/sec page/carousel/4.png" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev carousel-two" type="button"
+                            data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next carousel-two" type="button"
+                            data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>

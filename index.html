@@ -46,46 +46,58 @@
 
     <section class="header">
       <div class="container-fluid">
-        <div class="row">
-          <div class="place col-lg-4">
-            <div class="place-logo">
+        <div class="row row-cols-2 h" style="--bs-rows: 2; --bs-columns: 2;">
+          <div class="place row row-cols-5">
+            <div class="place-logo col-5 offset-md-2">
               <img class="logo" src="img/logo/лого3(переделка) 1.svg" alt="">
-              <h2 class="text-center text-light">От вас идея <br> от нас реализация</h2>
+              <h2 class="text-light">От вас идея <br> от нас реализация</h2>
             </div>
-            <a class="text-light">Реализуем все ваши идеи, <br>так как вы их видете и хотите. <br>Доверьте свои желания <br>Albero.</a>
-          </div>
-          <button type="button" class="btn btn-primary" 
-            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
-            data-bs-toggle="modal" data-bs-target="#exampleModal"
-            data-bs-whatever="@getbootstrap">
-            Заказать
-          </button>
+            <div class="place-other col-5 offset-md-2">
+              <a class="text-light mb-3">Реализуем все ваши идеи, <br>так как вы их видете и хотите. <br>Доверьте свои
+                желания <br>Albero.</a>
+              <button type="button" class="btn btn-primary"
+                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">
+                Заказать
+              </button>
 
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Напишите нам!</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <form>
-                    <div class="mb-3">
-                      <label for="recipient-name" class="col-form-label">Почта:</label>
-                      <input type="text" class="form-control" id="recipient-name">
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Напишите нам!</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="mb-3">
-                      <label for="message-text" class="col-form-label">Сообщение:</label>
-                      <textarea class="form-control" id="message-text"></textarea>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="recipient-name" class="col-form-label">Почта:</label>
+                          <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                          <label for="message-text" class="col-form-label">Сообщение:</label>
+                          <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                      </form>
                     </div>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Send message</button>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Send message</button>
+                    </div>
+                  </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="place-rentagle">
+            <div class="row row-cols-3 gy-5">
+              <img src="img/header/one-rentagle.jpg" class="rentagle col"></img>
+              <img src="img/header/two-rentaglejpg.jpg" class="rentagle col"></img>
+              <img src="img/header/three-rentagle.jpg" class="rentagle col"></img>
+              <img src="img/header/four-rentagle.jpg" class="rentagle col"></img>
+              <img src="img/header/five-rentagle.jpg" class="rentagle col"></img>
+              <img src="img/header/six-rentagle.jpg" class="rentagle col"></img>
             </div>
           </div>
         </div>
@@ -94,8 +106,52 @@
   </header>
 
   <main>
-    <section>
-
+    <section class="carousel fix">
+      <div class="container-fluid">
+        <div class="row">
+          <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/main/Фото карусель 2 (2).png" class="d-block w-100" alt="...">
+                <div class="place-text">
+                  <h2 class="text-light w">Всего 15000₽</h2>
+                  <h3 class="text-light w">Прихожая мечты</h3>
+                  <a href="">
+                    <button class="btn btn-primary">В каталог</button>
+                  </a>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/main/Фото карусель 2 (3).png" class="d-block w-100" alt="...">
+                <div class="place-text">
+                  <h2 class="text-light w">Всего 15000₽</h2>
+                  <h3 class="text-light w">Кухня white</h3>
+                  <a href="">
+                    <button class="btn btn-primary">В каталог</button>
+                  </a>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/main/Фото карусель 2 (4).png" class="d-block w-100" alt="...">
+                <div class="place-text">
+                  <h2 class="text-light w">Всего 25000₽</h2>
+                  <h3 class="text-light w">Кухня GreenBio</h3>
+                  <a href="">
+                    <button class="btn btn-primary">В каталог</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
     </section>
 
     <section class="our-works fix">

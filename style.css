@@ -81,8 +81,16 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     background-image: url(img/header/64b90821a7033\ \(1\)\ 1.png);
-    z-index: 1;
-    min-height: 600px;
+    z-index: 0;
+    height: 600px;
+}
+
+.header > .container-fluid {
+    height: 100%;
+}
+
+.container-fluid > .h{
+    height: 100%;
 }
 
 .header::after {
@@ -91,11 +99,72 @@ a {
     top: 0;
     left: 0;
     background-color: var(--color-three);
-    width: 30%;
+    width: 35%;
     height: 100%;
     opacity: 0.8;
+    z-index: -1;
 }
 
+.place {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.place-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.place-other {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    --bs-btn-hover-bg: #FF6200 ;
+    background-color: var(--color-primary);
+    border: none;
+    width: 50%;
+    padding: 10px;
+}
+
+.place-rentagle {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.rentagle {
+    width: 200px;
+    height: 250px;
+}
+
+.d-block {
+    position: relative;
+    height: 400px;
+}
+
+.place-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 7%;
+    z-index: 3;
+    height: 100%;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    width: 5%;
+    color: var(--color-three);
+}
 
 .card {
     padding: 0;

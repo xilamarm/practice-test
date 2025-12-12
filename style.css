@@ -52,6 +52,10 @@ dl, ol, ul {
     margin-bottom: 0;
 }
 
+h6 {
+    margin-bottom: 0;
+}
+
 a {
     color: white;
     text-decoration: none;
@@ -251,6 +255,17 @@ a {
     text-decoration: none;
 }
 
+.place-reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-rewievs {
+    background-color: var(--color-three);
+}
+
 .footer {
     background-color: var(--color-three);
 }
@@ -262,4 +277,28 @@ a {
 
 .btn-footer {
     width: 100%;
+}
+
+.card-rew {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-three) !important;
+    padding: 15px;
+    border-radius: 25px !important;
+    box-shadow: 0px 0px 4.5px 1px white;
+}
+
+.card-body-rew {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-down-rew {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5%;
 }

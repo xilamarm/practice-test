@@ -15,60 +15,101 @@
 -->
 
 <body>
-    <header class="header">
-        <div class="container margin-left-20">
-            <div class="row">
-                <img src="img/logo/лого3(переделка) 1.svg" alt="" class="logo">
-                <nav class="navbar w-75">
-                    <ul class="nav">
-                        <li><a class="nav-text text-light" href="index.html">Главная</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-text dropdown-toggle text-light" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Каталог
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Диваны</a></li>
-                                <li><a class="dropdown-item" href="#">Кухни</a></li>
-                                <li><a class="dropdown-item" href="#">Шкафы</a></li>
-                                <li><a class="dropdown-item" href="#">Прихожие</a></li>
-                            </ul>
-                        <li><a class="nav-text text-light" href="#">Отзывы</a></li>
-                        <li><a class="nav-text text-light" href="aboutus.html">О компании</a></li>
-                    </ul>
-                    <button type="button" class="nav-number" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        заказать
-                    </button>
-
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Номер для связи</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <a class="call-us" href="tel:+7 927 271 1199">+7 927 271 1199</a>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
+  <header class="fix">
+    <section class="navigation">
+      <div class="container-fluid">
+        <div class="row col-lg-auto py-3">
+          <nav class="col-lg-6 col-sm-6 nav-text-all">
+            <ul>
+              <li><a href="#" class="nav-text">Главная</a></li>
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle nav-text" data-bs-toggle="dropdown" aria-expanded="false">
+                  Каталог
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item nav-text" href="#">Шкафы</a></li>
+                  <li><a class="dropdown-item nav-text" href="#">Кухни</a></li>
+                  <li><a class="dropdown-item nav-text" href="#">Мебель</a></li>
+                </ul>
+              </li>
+              <li><a href="#" class="nav-text">Отзывы</a></li>
+              <li><a href="#" class="nav-text">О компании</a></li>
+            </ul>
+          </nav>
+          <div class="phone-item col-lg-6 col-sm-6 text-end">
+            <img class="user-none" src="img/header/Call - Calling.png" alt="" width="20px" height="20px">
+            <a class="nav-text user-none">+7 929 922 92-82</a>
+          </div>
         </div>
-    </header>
-    <main>
-        <div class="image_www">
+      </div>
+    </section>
+
+    <section class="header">
+      <div class="container-fluid">
+        <div class="row row-cols-2 h" style="--bs-rows: 2; --bs-columns: 2;">
+          <div class="place row row-cols-5">
+            <div class="place-logo col-5 offset-md-2">
+              <img class="logo" src="img/logo/лого3(переделка) 1.svg" alt="">
+              <h2 class="text-light">От вас идея <br> от нас реализация</h2>
+            </div>
+            <div class="place-other col-5 offset-md-2">
+              <a class="text-light mb-3">Реализуем все ваши идеи, <br>так как вы их видете и хотите. <br>Доверьте свои
+                желания <br>Albero.</a>
+              <button type="button" class="btn btn-primary"
+                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">
+                Заказать
+              </button>
+
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Напишите нам!</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="recipient-name" class="col-form-label">Почта:</label>
+                          <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                          <label for="message-text" class="col-form-label">Сообщение:</label>
+                          <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Send message</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="place-rentagle">
+            <div class="row row-cols-3 gy-5">
+              <img src="img/header/one-rentagle.jpg" class="rentagle col"></img>
+              <img src="img/header/two-rentaglejpg.jpg" class="rentagle col"></img>
+              <img src="img/header/three-rentagle.jpg" class="rentagle col"></img>
+              <img src="img/header/four-rentagle.jpg" class="rentagle col"></img>
+              <img src="img/header/five-rentagle.jpg" class="rentagle col"></img>
+              <img src="img/header/six-rentagle.jpg" class="rentagle col"></img>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+    <main class="fix">
+        <div class="image_www ">
             <img src="img/sec page/как работаем.png" alt="">
         </div>
     </main>
-    <section>
+    <section class="fix">
         <div class="container">
             <h2 class="text-light title-we-best">Почему мы лучшие</h2>
         </div>
@@ -86,7 +127,7 @@
                         экспертиза = идеальный
                         результат, как на этих фото.</h2>
                 </div>
-                <section class="carousel carousel-second">
+                <section class="carousel carousel-second fix">
                     <div id="carouselExampleAutoplaying" class="carousel slide w-50" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">

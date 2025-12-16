@@ -47,7 +47,9 @@ nav ul {
     list-style: none;
 }
 
-dl, ol, ul {
+dl,
+ol,
+ul {
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -87,11 +89,15 @@ a {
     height: 600px;
 }
 
-.header > .container-fluid {
+.header>.container-fluid {
     height: 100%;
 }
 
-.container-fluid > .h{
+.container-fluid>.h {
+    height: 100%;
+}
+
+.h>.h-two {
     height: 100%;
 }
 
@@ -128,7 +134,7 @@ a {
 }
 
 .btn {
-    --bs-btn-hover-bg: #FF6200 ;
+    --bs-btn-hover-bg: #FF6200;
     background-color: var(--color-primary);
     border: none;
     width: 50%;
@@ -163,7 +169,8 @@ a {
     height: 100%;
 }
 
-.carousel-control-next, .carousel-control-prev {
+.carousel-control-next,
+.carousel-control-prev {
     width: 5%;
     color: var(--color-three);
 }
@@ -257,13 +264,282 @@ a {
 }
 
 .row-footer {
-        border-top: 1px solid white;
+    border-top: 1px solid white;
     border-bottom: 1px solid white;
+}
+
+.place-logo-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .btn-footer {
     width: 100%;
 }
+
+@media (max-width: 768px) and (min-width: 320px) {
+    .header::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--color-three);
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+        z-index: -1;
+    }
+
+    .phone-item {
+        text-align: center !important;
+        margin-top: 10px;
+        font-size: 0.6rem;
+    }
+
+    .nav-text-all {
+        text-align: center !important;
+        justify-content: center !important;
+    }
+
+    .nav-text {
+        font-size: 0.6rem;
+    }
+
+    .place-rentagle {
+        display: none;
+    }
+
+    .place {
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    .place-logo,
+    .place-other {
+        text-align: center;
+        width: 75%;
+    }
+
+    .place-logo-footer {
+        width: 100%;
+    }
+
+    .place-text-footer h4 {
+        font-size: 1.2rem;
+        padding-top: 0.2rem !important;
+        padding-bottom: 0.2rem !important;
+    }
+
+    .place-text-footer li {
+        font-size: 1rem !important;
+    }
+
+    .place-text-footer a {
+        font-size: 1rem !important;
+        line-height: 0.2 !important;
+    }
+
+    .place-logo-footer h2 {
+        font-size: medium !important;
+    }
+
+    .place-text-footer {
+        width: 95%;
+        margin: 20px 0px;
+    }
+
+    .place-text {
+        right: 2%;
+    }
+
+    .place-text h2 {
+        font-size: 0.7rem;
+    }
+
+    .place-text h3 {
+        font-size: 0.5rem;
+    }
+
+    .place-text button {
+        font-size: 0.5rem;
+        width: 100%;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        width: 5%;
+    }
+
+    .d-block {
+        height: 200px;
+    }
+
+    .inactive-text {
+        display: block;
+    }
+
+    .card {
+        width: 15rem !important;
+    }
+
+    .card-advantages {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .place-logo h2 {
+        font-size: small;
+    }
+
+    .place-other a {
+        font-size: 0.6rem;
+    }
+
+    .row-rentagle {
+        gap: 4%;
+    }
+
+    .rentagle {
+        width: 125px;
+        height: 150px;
+        margin-top: 40px;
+    }
+
+    .place-text-footer h4 {
+        font-size: medium;
+    }
+
+    .place-text-footer li {
+        font-size: 0.8rem !important;
+    }
+
+    .place-text-footer a {
+        font-size: 0.6rem !important;
+    }
+
+    .place-logo-footer h2 {
+        font-size: medium !important;
+    }
+
+    .place-logo-footer img {
+        width: 50%;
+    }
+
+    .place-text {
+        right: 5%;
+    }
+
+    .place-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .place-text h3 {
+        font-size: 1rem;
+    }
+
+    .place-text button {
+        font-size: 1rem;
+        width: 75%;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        width: 7%;
+    }
+
+    .inactive-text {
+        display: none;
+    }
+
+    .card-advantages {
+        margin-bottom: 75px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .place-logo h2 {
+        font-size: medium;
+    }
+
+    .place-other a {
+        font-size: small;
+    }
+}
+
+@media (max-width: 1439px) and (min-width: 1024px) {
+    .place-text {
+        right: 7%;
+    }
+
+    .place-text h2 {
+        font-size: 1.4rem;
+    }
+
+    .place-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .place-text button {
+        font-size: 1rem;
+        width: 75%;
+    }
+
+    .inactive-text {
+        display: none;
+    }
+}
+
+@media (max-width: 1152px) and (min-width: 1024px) {
+    .rentagle {
+        width: 150px;
+        height: 200px;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .row-rentagle {
+        gap: 9%;
+    }
+
+    .place-logo h2 {
+        font-size: x-large;
+    }
+
+    .place-other a {
+        font-size: medium;
+    }
+
+    .d-block {
+        height: auto;
+    }
+
+    .inactive-text {
+        display: none;
+    }
+}
+
+@media (min-width: 1920px) {
+    .row-rentagle {
+        gap: 12%;
+    }
+
+    .d-block {
+        height: auto;
+    }
+
+    .inactive-text {
+        display: none;
+    }
+
+}
+
+/* конец index.html */
 
 .image_www {
     align-items: center;
@@ -287,13 +563,13 @@ a {
     display: flex;
 }
 
-.text-client{
+.text-client {
     width: 700px;
     display: grid;
     justify-content: end;
 }
 
-.text-client-one{
+.text-client-one {
     display: flex;
     width: 400px;
     font-weight: bold;
@@ -301,20 +577,20 @@ a {
     right: 100px;
 }
 
-.text-client-two{
+.text-client-two {
     display: flex;
     width: 500px;
     font-weight: bold;
 }
 
-.carousel-two{
+.carousel-two {
     width: auto;
 }
 
-.carousel-second{
+.carousel-second {
     justify-content: start;
 }
 
-.wrap-client_buy{
+.wrap-client_buy {
     flex-wrap: nowrap;
 }

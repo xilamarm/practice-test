@@ -1,4 +1,4 @@
-ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -82,8 +82,8 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
                       </form>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Send message</button>
+                      <button type="button" class="btn btn-secondary btn-modal" data-bs-dismiss="modal">Закрыть</button>
+                      <button type="button" class="btn btn-primary btn-modal">Отправить</button>
                     </div>
                   </div>
                 </div>
@@ -301,8 +301,8 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
             </a>
           </div>
         </div>
-        <div class="row">
-          <div class="card card-rew my-5" style="width: 20rem;">
+        <div class="row rewievs">
+          <div class="card card-rew mb-5" style="width: 20rem;">
             <div class="card-body-rew">
               <a class="card-text-rew">
                 Заказывали прихожую в новую
@@ -320,7 +320,7 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
               </div>
             </div>
           </div>
-          <div class="card card-rew my-5" style="width: 20rem;">
+          <div class="card card-rew mb-5" style="width: 20rem;">
             <div class="card-body-rew">
               <a class="card-text-rew">
                 Нужен был срочно шкаф в
@@ -337,7 +337,7 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
               </div>
             </div>
           </div>
-          <div class="card card-rew my-5" style="width: 20rem;">
+          <div class="card card-rew mb-5" style="width: 20rem;">
             <div class="card-body-rew">
               <a class="card-text-rew">
                 Заказывали прихожую в новую
@@ -355,7 +355,7 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
               </div>
             </div>
           </div>
-          <div class="card card-rew" style="width: 20rem;">
+          <div class="card card-rew mb-5" style="width: 20rem;">
             <div class="card-body-rew">
               <a class="card-text-rew">
                 Нужен был срочно шкаф в
@@ -372,7 +372,7 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
               </div>
             </div>
           </div>
-          <div class="card card-rew" style="width: 20rem;">
+          <div class="card card-rew mb-5" style="width: 20rem;">
             <div class="card-body-rew">
               <a class="card-text-rew">
                 Боялась заказывать кухню
@@ -390,7 +390,7 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
               </div>
             </div>
           </div>
-          <div class="card card-rew" style="width: 20rem;">
+          <div class="card card-rew mb-5" style="width: 20rem;">
             <div class="card-body-rew">
               <a class="card-text-rew">
                 Заказывали прихожую в новую
@@ -443,12 +443,48 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
           <a>
             Вы всегда можете связаться с нами и мы ответим на любые ваши вопросы!
           </a>
-          <button class="btn btn-primary my-2 btn-footer">Связаться</button>
+          <div class="down-modal">
+            <button type="button" class="btn btn-primary"
+              style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+              data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">
+              Связаться
+            </button>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Напишите нам!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Почта:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                      </div>
+                      <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Сообщение:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-modal" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary btn-modal">Отправить</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <h4 class="text-light py-3 mx-3">©Все права защищены “Albero”</h4>
-      </div>
+    </div>
+
+    <div class="row">
+      <h4 class="text-light py-3 mx-3">©Все права защищены “Albero”</h4>
+    </div>
     </div>
   </footer>
 

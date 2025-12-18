@@ -303,3 +303,19 @@ a {
     justify-content: start;
     gap: 5%;
 }
+
+.image-www{
+    justify-content: center;
+    display: flex;
+    height: 700px;
+}
+
+.title-we-best{
+    justify-content: center;
+    display: flex;
+}
+
+.title-client{
+    display: flex;
+    justify-content: center;
+}

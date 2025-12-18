@@ -1,4 +1,4 @@
-ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -18,7 +18,7 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
   <header class="fix">
     <section class="navigation">
       <div class="container-fluid">
-        <div class="row col-lg-auto py-3">
+        <div class="row col-lg-auto py-3 ">
           <nav class="col-lg-6 col-sm-6 nav-text-all">
             <ul>
               <li><a href="#" class="nav-text">Главная</a></li>
@@ -47,10 +47,10 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
     <section class="header">
       <div class="container-fluid">
         <div class="row row-cols-2 h" style="--bs-rows: 2; --bs-columns: 2;">
-          <div class="place row row-cols-5">
+          <div class="place row row-cols-5 h-two">
             <div class="place-logo col-5 offset-md-2">
               <img class="logo" src="img/logo/лого3(переделка) 1.svg" alt="">
-              <h2 class="text-light">От вас желания, <br> от нас реализация</h2>
+              <h2 class="text-light">От вас желания <br> от нас реализация</h2>
             </div>
             <div class="place-other col-5 offset-md-2">
               <a class="text-light mb-3">Реализуем все ваши идеи, <br>так как вы их видете и хотите. <br>Доверьте свои
@@ -82,22 +82,22 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
                       </form>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Send message</button>
+                      <button type="button" class="btn btn-secondary btn-modal" data-bs-dismiss="modal">Закрыть</button>
+                      <button type="button" class="btn btn-primary btn-modal">Отправить</button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="place-rentagle">
-            <div class="row row-cols-3 gy-5">
+          <div class="containet-fluid place-rentagle h-two">
+            <div class="row row-cols-3 row-rentagle">
               <img src="img/header/one-rentagle.jpg" class="rentagle col"></img>
               <img src="img/header/two-rentaglejpg.jpg" class="rentagle col"></img>
               <img src="img/header/three-rentagle.jpg" class="rentagle col"></img>
               <img src="img/header/four-rentagle.jpg" class="rentagle col"></img>
-              <img src="img/header/five-rentagle.jpg" class="rentagle col"></img>
-              <img src="img/header/six-rentagle.jpg" class="rentagle col"></img>
+              <img src="img/header/five-rentagle.jpg" class="rentagle col inactive"></img>
+              <img src="img/header/six-rentagle.jpg" class="rentagle col inactive"></img>
             </div>
           </div>
         </div>
@@ -156,6 +156,9 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
 
     <section class="our-works fix">
       <div class="container">
+        <div class="row">
+          <h2 class="text-light text-center inactive-text fix ">Галерея работ</h2>
+        </div>
         <div class="row row-cols-xl-3 row-cols-3 row-cols-md-2 row-cols-xc-1 gy-5">
           <div class="card col" style="width: 22rem;">
             <div class="card_item">
@@ -221,6 +224,8 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
       </div>
     </section>
 
+
+    <!--доделать js-->
     <section class="our-advantages fix">
       <div class="container">
         <div class="row padding-advantage">
@@ -254,33 +259,33 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
 
           <img class="card-advantages col-lg-4" src="img/main/fon-advantages.png" alt="">
 
-          <div class="row">
+        </div>
+        <div class="row">
 
-            <img class="card-advantages col-lg-4" src="img/main/fon-advantages-two.png" alt="">
+          <img class="card-advantages col-lg-4" src="img/main/fon-advantages-three.png" alt="" height="200px">
 
-            <div class="card-advantages col-lg-4">
-              <div class="advantage-item">
-                <h4 class="text-light">Быстрая доставка</h4>
-                <img class="img-advantage" src="img/main/Tick.png" alt="">
-              </div>
-              <a class="text-light">Чёткая логистика и собственный
-                автопарк позволяют нам доставлять
-                заказы точно в срок, а часто - даже
-                быстрее.</a>
+          <div class="card-advantages col-lg-4">
+            <div class="advantage-item">
+              <h4 class="text-light">Быстрая доставка</h4>
+              <img class="img-advantage" src="img/main/Tick.png" alt="">
             </div>
+            <a class="text-light">Чёткая логистика и собственный
+              автопарк позволяют нам доставлять
+              заказы точно в срок, а часто - даже
+              быстрее.</a>
+          </div>
 
-            <div class="card-advantages col-lg-4">
-              <div class="advantage-item">
-                <h4 class="text-light">Подскажем что выбрать </h4>
-                <img class="img-advantage" src="img/main/Tick.png" alt="">
-              </div>
-              <a class="text-light">Сомневаетесь между модулями,
-                цветами или материалами? Наш
-                профессиональный консультант 
-                подскажет, что выбрать, исходя
-                из ваших потребностей. Ваш
-                комфорт — наш приоритет.</a>
+          <div class="card-advantages col-lg-4">
+            <div class="advantage-item">
+              <h4 class="text-light">Подскажем что выбрать </h4>
+              <img class="img-advantage" src="img/main/Tick.png" alt="">
             </div>
+            <a class="text-light">Сомневаетесь между модулями,
+              цветами или материалами? Наш
+              профессиональный консультант 
+              подскажет, что выбрать, исходя
+              из ваших потребностей. Ваш
+              комфорт — наш приоритет.</a>
           </div>
         </div>
       </div>
@@ -296,8 +301,8 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
             </a>
           </div>
         </div>
-        <div class="row">
-          <div class="card card-rew my-5" style="width: 20rem;">
+        <div class="row rewievs">
+          <div class="card card-rew mb-5" style="width: 20rem;">
             <div class="card-body-rew">
               <a class="card-text-rew">
                 Заказывали прихожую в новую
@@ -315,7 +320,7 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
               </div>
             </div>
           </div>
-          <div class="card card-rew my-5" style="width: 20rem;">
+          <div class="card card-rew mb-5" style="width: 20rem;">
             <div class="card-body-rew">
               <a class="card-text-rew">
                 Нужен был срочно шкаф в
@@ -332,7 +337,7 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
               </div>
             </div>
           </div>
-          <div class="card card-rew my-5" style="width: 20rem;">
+          <div class="card card-rew mb-5" style="width: 20rem;">
             <div class="card-body-rew">
               <a class="card-text-rew">
                 Заказывали прихожую в новую
@@ -350,7 +355,7 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
               </div>
             </div>
           </div>
-          <div class="card card-rew" style="width: 20rem;">
+          <div class="card card-rew mb-5" style="width: 20rem;">
             <div class="card-body-rew">
               <a class="card-text-rew">
                 Нужен был срочно шкаф в
@@ -367,7 +372,7 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
               </div>
             </div>
           </div>
-          <div class="card card-rew" style="width: 20rem;">
+          <div class="card card-rew mb-5" style="width: 20rem;">
             <div class="card-body-rew">
               <a class="card-text-rew">
                 Боялась заказывать кухню
@@ -385,7 +390,7 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
               </div>
             </div>
           </div>
-          <div class="card card-rew" style="width: 20rem;">
+          <div class="card card-rew mb-5" style="width: 20rem;">
             <div class="card-body-rew">
               <a class="card-text-rew">
                 Заказывали прихожую в новую
@@ -411,7 +416,7 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
   <footer class="footer">
     <div class="container-fluid">
       <div class="row row-footer">
-        <div class="place-logo col-3">
+        <div class="place-logo-footer col-3">
           <img class="logo" src="img/logo/лого3(переделка) 1.svg" alt="">
           <h2 class="text-light">От вас желания <br> от нас реализация</h2>
         </div>
@@ -438,12 +443,48 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
           <a>
             Вы всегда можете связаться с нами и мы ответим на любые ваши вопросы!
           </a>
-          <button class="btn btn-primary my-2 btn-footer">Связаться</button>
+          <div class="down-modal">
+            <button type="button" class="btn btn-primary"
+              style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+              data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">
+              Связаться
+            </button>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Напишите нам!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Почта:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                      </div>
+                      <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Сообщение:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-modal" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary btn-modal">Отправить</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <h4 class="text-light py-3 mx-3">©Все права защищены “Albero”</h4>
-      </div>
+    </div>
+
+    <div class="row">
+      <h4 class="text-light py-3 mx-3">©Все права защищены “Albero”</h4>
+    </div>
     </div>
   </footer>
 

@@ -272,7 +272,6 @@ a {
 }
 
 .card-rew {
-    box-shadow: 0px 0px 4px 2px white;
     background-color: var(--color-three) !important;
 }
 
@@ -793,6 +792,19 @@ a {
 
 .wrap-client_buy{
     flex-wrap: nowrap;
+}
+
+.card-rew-one{
+     background-color: var(--color-three) !important;
+     border: none;
+}
+
+.card-rew-two{
+    background-color: var(--color-primary) !important;
+    border: none;
+}
+
+.img-card-wwc{
 }
 
 @media (max-width:1500px) {

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="fix">
+        <header class="fix">
+            <section class="navigation">
+                <div class="container-fluid">
+                    <div class="row col-lg-auto py-3 ">
+                        <nav class="col-lg-6 col-sm-6 nav-text-all">
+                            <ul>
+                                <li><a href="index.html" class="nav-text">Главная</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="dropdown-toggle nav-text" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Каталог
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark">
+                                        <li><a class="dropdown-item nav-text" href="catalog.html">Шкафы</a></li>
+                                        <li><a class="dropdown-item nav-text" href="catalog.html">Кухни</a></li>
+                                        <li><a class="dropdown-item nav-text" href="catalog.html">Мебель</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="reviews" class="nav-text">Отзывы</a></li>
+                                <li><a href="aboutus.html" class="nav-text">О компании</a></li>
+                            </ul>
+                        </nav>
+                        <div class="phone-item col-lg-6 col-sm-6 text-end">
+                            <img class="user-none" src="img/header/Call - Calling.png" alt="" width="20px"
+                                height="20px">
+                            <a class="nav-text" href="tel:+79626356332">+7 929 922 92-82</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <main></main>
+
+            <section class="header">
+                <div class="container-fluid">
+                    <div class="row row-cols-2 h" style="--bs-rows: 2; --bs-columns: 2;">
+                        <div class="place row row-cols-5 h-two">
+                            <div class="place-logo col-5 offset-md-2">
+                                <img class="logo" src="img/logo/лого3(переделка) 1.svg" alt="">
+                                <h2 class="text-light">От вас желания <br> от нас реализация</h2>
+                            </div>
+                            <div class="place-other col-5 offset-md-2">
+                                <a class="text-light mb-3">Реализуем все ваши идеи, <br>так как вы их видете и хотите.
+                                    <br>Доверьте свои
+                                    желания <br>Albero.</a>
+                                <button type="button" class="btn btn-primary"
+                                    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                    data-bs-whatever="@getbootstrap">
+                                    Заказать
+                                </button>
+
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Напишите нам!</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="mb-3">
+                                                        <label for="recipient-name"
+                                                            class="col-form-label">Почта:</label>
+                                                        <input type="text" class="form-control" id="recipient-name">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="message-text"
+                                                            class="col-form-label">Сообщение:</label>
+                                                        <textarea class="form-control" id="message-text"></textarea>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary btn-modal"
+                                                    data-bs-dismiss="modal">Закрыть</button>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-modal">Отправить</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="containet-fluid place-rentagle h-two">
+                            <div class="row row-cols-3 row-rentagle">
+                                <img src="img/header/one-rentagle.jpg" class="rentagle col"></img>
+                                <img src="img/header/two-rentaglejpg.jpg" class="rentagle col"></img>
+                                <img src="img/header/three-rentagle.jpg" class="rentagle col"></img>
+                                <img src="img/header/four-rentagle.jpg" class="rentagle col"></img>
+                                <img src="img/header/five-rentagle.jpg" class="rentagle col inactive"></img>
+                                <img src="img/header/six-rentagle.jpg" class="rentagle col inactive"></img>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row row-footer">
+                    <div class="place-logo-footer col-3">
+                        <img class="logo" src="img/logo/лого3(переделка) 1.svg" alt="">
+                        <h2 class="text-light">От вас желания <br> от нас реализация</h2>
+                    </div>
+                    <div class="place-text-footer col-2 text-light">
+                        <h4 class="py-4">Разделы нашего сайта</h4>
+                        <li><a href="">Главная страница</a></li>
+                        <li><a href="">Каталог</a></li>
+                        <li><a href="">Отзывы</a></li>
+                        <li><a href="">О компании</a></li>
+                    </div>
+                    <div class="place-text-footer col-2 text-light">
+                        <h4 class="py-4">Контакты для связи с нами</h4>
+                        <li>Tel: +7 (999) 999 99-99</li>
+                        <li>Email: test@gmail.com</li>
+                        <li>Telegram: @test</li>
+                    </div>
+                    <div class="place-text-footer col-2 text-light">
+                        <h4 class="py-4">Как стать частью команды</h4>
+                        <li>Условия работы</li>
+                        <li>Вакансии</li>
+                    </div>
+                    <div class="place-text-footer col-2 text-light">
+                        <h4 class="py-4">Остались вопросы?</h4>
+                        <a>
+                            Вы всегда можете связаться с нами и мы ответим на любые ваши вопросы!
+                        </a>
+                        <div class="down-modal my-3">
+                            <button type="button" class="btn btn-primary"
+                                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">
+                                Связаться
+                            </button>
+
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Напишите нам!</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="mb-3">
+                                                    <label for="recipient-name" class="col-form-label">Почта:</label>
+                                                    <input type="text" class="form-control" id="recipient-name">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="message-text" class="col-form-label">Сообщение:</label>
+                                                    <textarea class="form-control" id="message-text"></textarea>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary btn-modal"
+                                                data-bs-dismiss="modal">Закрыть</button>
+                                            <button type="button" class="btn btn-primary btn-modal">Отправить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4 class="text-light py-3 mx-3">©Все права защищены “Albero”</h4>
+            </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>

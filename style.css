@@ -646,6 +646,29 @@ a {
 
 /* конец index.html */
 
+.sm-hww{
+    display: none;
+}
+
+.title-hww{
+    justify-content: center;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.card-down-rew-one{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5%;
+}
+
+.card-down-rew-one img{
+    width: 50px !important;
+}
+
 .divan-one{
     position: absolute;
     height: 100px;
@@ -781,7 +804,27 @@ a {
 
 }
 @media (max-width: 1440px){
+.wrap-client_buy{
+    flex-direction: column;
+    align-items: center;
+}
+.text-client-one{
+    right: 0;
+    padding-bottom: 40px;
+    text-align: justify;
+    width: 100%;
+}
 
+.carousel-second{
+    justify-content: center;
+    display: flex;
+}
+
+.text-client-two{
+    text-align:justify;
+    padding-bottom: 40px;
+    width: 100%;
+}
 }
 @media (max-width: 1024px){
 
@@ -790,5 +833,13 @@ a {
 @media (max-width:960px){
     .image_we_c{
         display: none;
+    }
+
+    .sm-hww{
+        display: block;
+    }
+
+    .title-we-best{
+        margin-bottom: 40px;
     }
 }

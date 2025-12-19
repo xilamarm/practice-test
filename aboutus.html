@@ -2,12 +2,12 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <!--h2-главные заголовки
@@ -15,10 +15,10 @@
 -->
 
 <body>
-    <header>
+  <header class="fix">
     <section class="navigation">
       <div class="container-fluid">
-        <div class="row col-lg-auto py-3">
+        <div class="row col-lg-auto py-3 ">
           <nav class="col-lg-6 col-sm-6 nav-text-all">
             <ul>
               <li><a href="index.html" class="nav-text">Главная</a></li>
@@ -47,10 +47,10 @@
     <section class="header">
       <div class="container-fluid">
         <div class="row row-cols-2 h" style="--bs-rows: 2; --bs-columns: 2;">
-          <div class="place row row-cols-5">
+          <div class="place row row-cols-5 h-two">
             <div class="place-logo col-5 offset-md-2">
               <img class="logo" src="img/logo/лого3(переделка) 1.svg" alt="">
-              <h2 class="text-light">От вас желание, <br> от нас реализация</h2>
+              <h2 class="text-light">От вас желания <br> от нас реализация</h2>
             </div>
             <div class="place-other col-5 offset-md-2">
               <a class="text-light mb-3">Реализуем все ваши идеи, <br>так как вы их видете и хотите. <br>Доверьте свои
@@ -82,91 +82,86 @@
                       </form>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Send message</button>
+                      <button type="button" class="btn btn-secondary btn-modal" data-bs-dismiss="modal">Закрыть</button>
+                      <button type="button" class="btn btn-primary btn-modal">Отправить</button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="place-rentagle">
-            <div class="row row-cols-3 gy-5">
+          <div class="containet-fluid place-rentagle h-two">
+            <div class="row row-cols-3 row-rentagle">
               <img src="img/header/one-rentagle.jpg" class="rentagle col"></img>
               <img src="img/header/two-rentaglejpg.jpg" class="rentagle col"></img>
               <img src="img/header/three-rentagle.jpg" class="rentagle col"></img>
               <img src="img/header/four-rentagle.jpg" class="rentagle col"></img>
-              <img src="img/header/five-rentagle.jpg" class="rentagle col"></img>
-              <img src="img/header/six-rentagle.jpg" class="rentagle col"></img>
+              <img src="img/header/five-rentagle.jpg" class="rentagle col inactive"></img>
+              <img src="img/header/six-rentagle.jpg" class="rentagle col inactive"></img>
             </div>
           </div>
         </div>
       </div>
     </section>
   </header>
-    <main>
-        <div class="image_www">
-          <img class="divan-one" src="img/sec page/bg image/диван(вектор).png" alt="">
-          <img class="divan-two" src="img/sec page/bg image/диван (1).png" alt="">
-          <img src="img/sec page/bg image/шкаф.png" alt="" class="shkaf-one">
-            <img class="image_we_c" src="img/sec page/как работаем.png" alt="">
+
+  <main>
+    <div class="image_www">
+      <img src="img/sec page/как работаем.png" alt="">
+    </div>
+  </main>
+  <section class="fix">
+    <div class="container">
+      <h2 class="text-light title-we-best">Почему мы лучшие</h2>
+      <div class="image-www">
+        <img src="img/sec page/ромбики (1).png" alt="">
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <h2 class="text-light title-client">Что заказывали клиенты</h2>
+      <div class="row mt-5 wrap-client_buy">
+        <div class="text-client">
+          <h2 class="text-client-one mb-0 text-light">За те годы которые мы на
+            рынке мы сделали так как
+            хочет клиент.</h2>
+          <h2 class="text-client-two mb-0 text-light">А главное мы отточили навык: слышать и
+            воплощать. Ваша идея + наша
+            экспертиза = идеальный
+            результат, как на этих фото.</h2>
         </div>
-    </main>
-    <section class="fix">
-      <img src="img/sec page/bg image/диван.png" alt="" class="divan-three">
-      <img src="img/sec page/bg image/шкаф.png" alt="" class="shkaf-two">
-      <img src="img/sec page/bg image/диван (1).png" alt="" class="divan-four">
-        <div class="container">
-            <h2 class="text-light title-we-best">Почему мы лучшие</h2>
-            <div class="image-www">
-            <img class="image_we_c" src="img/sec page/ромбики (1).png" alt="">
+        <section class="carousel carousel-second fix">
+          <div id="carouselExampleAutoplaying" class="carousel slide w-50" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/sec page/carousel/1.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/sec page/carousel/2.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/sec page/carousel/3.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/sec page/carousel/4.png" class="d-block w-100" alt="...">
+              </div>
             </div>
-        </div>
-    </section>
-    <section>
-        <div class="container">
-            <h2 class="text-light title-client">Что заказывали клиенты</h2>
-            <div class="row mt-5 wrap-client_buy">
-                <div class="text-client">
-                    <h2 class="text-client-one mb-0 text-light">За те годы которые мы на
-                        рынке мы сделали так как
-                        хочет клиент.</h2>
-                    <h2 class="text-client-two mb-0 text-light">А главное мы отточили навык: слышать и
-                        воплощать. Ваша идея + наша
-                        экспертиза = идеальный
-                        результат, как на этих фото.</h2>
-                </div>
-                <section class="carousel carousel-second fix">
-                    <div id="carouselExampleAutoplaying" class="carousel slide w-50" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/sec page/carousel/1.png" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/sec page/carousel/2.png" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/sec page/carousel/3.png" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/sec page/carousel/4.png" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev carousel-two" type="button"
-                            data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next carousel-two" type="button"
-                            data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-            </div>
-        </div>
-    </section>
-      <footer class="footer">
+            <button class="carousel-control-prev carousel-two" type="button"
+              data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next carousel-two" type="button"
+              data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
     <div class="container-fluid">
       <div class="row row-footer">
         <div class="place-logo col-3">
@@ -204,7 +199,7 @@
       </div>
     </div>
   </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 </body>

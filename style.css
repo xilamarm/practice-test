@@ -297,6 +297,13 @@ a {
 
 .btn-rewievs {
     background-color: var(--color-three) !important;
+    transition: all 0.3s;
+}
+
+.btn-rewievs:hover {
+    background-color: var(--color-second) !important;
+    transform: scale(0.95);
+    transition: all 0.3s;
 }
 
 .footer {

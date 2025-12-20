@@ -23,6 +23,7 @@ body {
     background-color: #212529;
     font-family: Quicksand !important;
     padding-right: 0 !important;
+    scroll-behavior: smooth;
 }
 
 .fix {
@@ -55,6 +56,11 @@ ul {
     margin-bottom: 0;
 }
 
+ol,
+ul {
+    padding-left: 0;
+}
+
 h6 {
     margin-bottom: 0;
 }
@@ -65,7 +71,16 @@ a {
 }
 
 .navigation {
+    width: 100%;
+    height: 50px;
     background-color: var(--color-three);
+}
+
+.navigation>.container-fluid {
+    width: 100%;
+    position: fixed;
+    background-color: var(--color-three);
+    z-index: 5;
 }
 
 .nav-text-all {
@@ -264,6 +279,60 @@ a {
     text-decoration: none;
 }
 
+@keyframes expandClip {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+    70% {
+        clip-path: inset(0 0 0 0);
+    }
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes fadeInDiamond {
+    0%, 70% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.animated-container {
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 2s ease-out;
+    width: 100%;
+    overflow: hidden;
+}
+
+.animated-container.animate {
+    clip-path: inset(0 0 0 0);
+}
+
+.diamond {
+    opacity: 0;
+    transition: opacity 2s ease-out;
+}
+
+.diamond.animate {
+    opacity: 1;
+}
+
+.svg-advantage-wrapper {
+    width: 100%;
+    max-width: 335px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.card-advantages svg {
+    width: 100%;
+    height: 32px;
+}
+
 .place-reviews {
     display: flex;
     flex-direction: column;
@@ -272,7 +341,6 @@ a {
 }
 
 .card-rew {
-    box-shadow: 0px 0px 4px 2px white;
     background-color: var(--color-three) !important;
 }
 
@@ -333,10 +401,6 @@ a {
     width: 100%;
 }
 
-.modal-backdrop.show {
-    display: none;
-}
-
 .modal-backdrop {
     --bs-backdrop-zindex: 1050;
     --bs-backdrop-bg: #000;
@@ -369,14 +433,14 @@ a {
 }
 
 .modal-footer {
-   flex-wrap: nowrap
+    flex-wrap: nowrap
 }
 
 .btn-modal {
     background-color: var(--color-three)
 }
 
-@media (max-width: 770px) and (min-width: 320px) {
+@media (max-width: 768px) and (min-width: 320px) {
     .header::after {
         content: "";
         position: absolute;
@@ -391,8 +455,11 @@ a {
 
     .phone-item {
         text-align: center !important;
-        margin-top: 10px;
-        font-size: 0.6rem;
+    }
+
+    .phone-item img {
+        width: 15px;
+        height: auto;
     }
 
     .nav-text-all {
@@ -401,11 +468,15 @@ a {
     }
 
     .nav-text {
-        font-size: 0.6rem;
+        font-size: 0.9rem;
     }
 
     .place-rentagle {
         display: none;
+    }
+
+    .offset-md-2 {
+        margin-left: 0;
     }
 
     .place {
@@ -486,15 +557,44 @@ a {
     .card-advantages {
         margin-bottom: 50px;
     }
+
+    .card-advantages a {
+        text-align: start !important;
+    }
+
+    .card-advantages-img {
+        display: none;
+    }
+
+    .advantage-item {
+        justify-content: start;
+    }
+
+    .copyright {
+        width: 95%;
+        margin-right: 25%;
+    }
+
+    .svg-advantage-wrapper {
+        max-width: 100%;
+    }
+
+    .card-advantages {
+        margin-bottom: 30px;
+    }
+
+    .card-advantages svg {
+        width: auto;
+    }
 }
 
-@media (max-width: 1023px) and (min-width: 768px) {
+@media (max-width: 1024px) and (min-width: 769px) {
     .place-logo h2 {
-        font-size: small;
+        font-size: 1rem;
     }
 
     .place-other a {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
     }
 
     .row-rentagle {
@@ -560,9 +660,32 @@ a {
     .rewievs {
         gap: 1%;
     }
+
+    .advantage-item {
+        height: 50px;
+    }
+
+    .card-advantages-img {
+        display: none;
+    }
+
+    .svg-advantage-wrapper {
+        max-width: 280px;
+    }
+    
+    .card-advantages svg {
+        width: auto;
+    }
 }
 
-@media (min-width: 1024px) {
+.card-advantages > div:has(svg) {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+
+@media (min-width: 1025px) {
     .place-logo h2 {
         font-size: medium;
     }
@@ -576,7 +699,7 @@ a {
     }
 }
 
-@media (max-width: 1438px) and (min-width: 1024px) {
+@media (max-width: 1440px) and (min-width: 1025px) {
     .place-text {
         right: 7%;
     }
@@ -597,9 +720,13 @@ a {
     .inactive-text {
         display: none;
     }
+
+    .advantage-item {
+        height: 50px;
+    }
 }
 
-@media (max-width: 1151px) and (min-width: 1024px) {
+@media (max-width: 1151px) and (min-width: 1025px) {
     .rentagle {
         width: 150px;
         height: 200px;
@@ -607,7 +734,7 @@ a {
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
     .row-rentagle {
         gap: 9%;
     }
@@ -629,7 +756,7 @@ a {
     }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1921px) {
     .row-rentagle {
         gap: 12%;
     }
@@ -646,7 +773,7 @@ a {
 
 /* конец index.html */
 
-.divan-one{
+.divan-one {
     position: absolute;
     height: 100px;
     top: 90%;
@@ -654,7 +781,7 @@ a {
     transform: rotate(35deg);
 }
 
-.divan-two{
+.divan-two {
     position: absolute;
     height: 100px;
     bottom: -300px;
@@ -662,14 +789,14 @@ a {
     transform: rotate(-35deg);
 }
 
-.shkaf-one{
+.shkaf-one {
     position: absolute;
     height: 150px;
     bottom: -500px;
     left: 70%;
 }
 
-.divan-three{
+.divan-three {
     position: absolute;
     height: 100px;
     top: 1800px;
@@ -677,7 +804,7 @@ a {
     transform: rotate(-35deg);
 }
 
-.shkaf-two{
+.shkaf-two {
     position: absolute;
     height: 150px;
     top: 1800px;
@@ -685,7 +812,7 @@ a {
     transform: rotate(35deg);
 }
 
-.divan-four{
+.divan-four {
     position: absolute;
     height: 150px;
     top: 2200px;
@@ -701,24 +828,24 @@ a {
     padding: 100px 15px;
 }
 
-.image_we_c{
+.image_we_c {
     height: 700px;
 }
 
-.image-www{
+.image-www {
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: row;
 }
 
-.title-we-best{
+.title-we-best {
     justify-content: center;
     display: flex;
     padding-top: 30px;
 }
 
-.title-client{
+.title-client {
     display: flex;
     justify-content: center;
 }
@@ -739,13 +866,13 @@ a {
     display: flex;
 }
 
-.text-client{
+.text-client {
     width: 700px;
     display: grid;
     justify-content: end;
 }
 
-.text-client-one{
+.text-client-one {
     display: flex;
     width: 400px;
     font-weight: bold;
@@ -753,42 +880,45 @@ a {
     right: 100px;
 }
 
-.text-client-two{
+.text-client-two {
     display: flex;
     width: 500px;
     font-weight: bold;
 }
 
-.carousel-two{
+.carousel-two {
     width: auto;
 }
 
-.carousel-second{
+.carousel-second {
     justify-content: start;
     gap: 5%;
 }
 
-.wrap-client_buy{
+.wrap-client_buy {
     flex-wrap: nowrap;
 }
 
 @media (max-width:1500px) {
-    .divan-four, .divan-one, .divan-three, .divan-two, .shkaf-one, .shkaf-two{
+
+    .divan-four,
+    .divan-one,
+    .divan-three,
+    .divan-two,
+    .shkaf-one,
+    .shkaf-two {
         display: none !important;
     }
 }
-@media (max-width: 768px) {
 
-}
-@media (max-width: 1440px){
+@media (max-width: 768px) {}
 
-}
-@media (max-width: 1024px){
+@media (max-width: 1440px) {}
 
-}
+@media (max-width: 1024px) {}
 
-@media (max-width:960px){
-    .image_we_c{
+@media (max-width:960px) {
+    .image_we_c {
         display: none;
     }
 }

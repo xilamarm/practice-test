@@ -899,6 +899,19 @@ a {
     flex-wrap: nowrap;
 }
 
+.card-rew-one{
+     background-color: var(--color-three) !important;
+     border: none;
+}
+
+.card-rew-two{
+    background-color: var(--color-primary) !important;
+    border: none;
+}
+
+.img-card-wwc{
+}
+
 @media (max-width:1500px) {
 
     .divan-four,
@@ -920,5 +933,13 @@ a {
 @media (max-width:960px) {
     .image_we_c {
         display: none;
+    }
+
+    .sm-hww{
+        display: block;
+    }
+
+    .title-we-best{
+        margin-bottom: 40px;
     }
 }

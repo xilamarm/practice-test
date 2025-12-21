@@ -4,14 +4,69 @@ document.addEventListener('DOMContentLoaded', function() {
     const svgRows = document.querySelector('.svg-choice-place svg:nth-child(2)');
     const mainSection = document.querySelector('.main-choice-section');
     
-    let currentView = 'square';
-    let currentCategory = 'shkaf';
+    let currentView = 'square'; // Только квадратный вид по умолчанию
+    let currentCategory = 'shkaf'; // Шкафы выбраны по умолчанию
+    
+    const allSquareCards = mainSection.querySelectorAll('.card-choice:not(.card-choice-gorizontal)');
+    const allHorizontalCards = mainSection.querySelectorAll('.card-choice-gorizontal');
     
     const cardGroups = {
-        'shkaf': mainSection.querySelectorAll('.card-choice:not(.gost):not(.gost-two)'),
-        'prikhozhia': mainSection.querySelectorAll('.gost'),
-        'kukhni': mainSection.querySelectorAll('.gost-two')
+        'shkaf': {
+            square: Array.from(allSquareCards).filter(card => !card.classList.contains('gost') && !card.classList.contains('gost-two')),
+            horizontal: Array.from(allHorizontalCards).filter(card => !card.classList.contains('gost') && !card.classList.contains('gost-two'))
+        },
+        'prikhozhia': {
+            square: Array.from(allSquareCards).filter(card => card.classList.contains('gost')),
+            horizontal: Array.from(allHorizontalCards).filter(card => card.classList.contains('gost'))
+        },
+        'kukhni': {
+            square: Array.from(allSquareCards).filter(card => card.classList.contains('gost-two')),
+            horizontal: Array.from(allHorizontalCards).filter(card => card.classList.contains('gost-two'))
+        }
     };
+    
+    function hideAllCards() {
+        allSquareCards.forEach(card => card.style.display = 'none');
+        allHorizontalCards.forEach(card => card.style.display = 'none');
+    }
+    
+    function showCards(category, view) {
+        hideAllCards(); // Сначала скрываем ВСЕ карточки
+        
+        const cardsToShow = cardGroups[category];
+        
+        if (cardsToShow) {
+            if (view === 'square') {
+                cardsToShow.square.forEach(card => {
+                    card.style.display = 'block';
+                });
+            } else if (view === 'horizontal') {
+                // Для горизонтального вида показываем только горизонтальные карточки
+                cardsToShow.horizontal.forEach(card => {
+                    card.style.display = 'flex';
+                });
+            }
+        }
+    }
+    
+    function updateView(view) {
+        currentView = view;
+        showCards(currentCategory, currentView);
+        
+        // Обновляем стили SVG
+        if (view === 'square') {
+            svgGrid.style.opacity = '1';
+            svgRows.style.opacity = '0.5';
+        } else if (view === 'horizontal') {
+            svgGrid.style.opacity = '0.5';
+            svgRows.style.opacity = '1';
+        }
+    }
+    
+    // Инициализация: скрываем все горизонтальные карточки по умолчанию
+    allHorizontalCards.forEach(card => {
+        card.style.display = 'none';
+    });
     
     dropdowns.forEach(dropdown => {
         const button = dropdown.querySelector('.dropdown-toggle');
@@ -48,10 +103,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     checkbox.checked = true;
                     button.textContent = link.textContent;
                     
+                    // Обновляем текущую категорию
                     if (link.textContent === 'Шкаф') currentCategory = 'shkaf';
                     if (link.textContent === 'Прихожии') currentCategory = 'prikhozhia';
                     if (link.textContent === 'Кухни') currentCategory = 'kukhni';
                     
+                    // Всегда показываем квадратный вид при смене категории
+                    currentView = 'square';
+                    svgGrid.style.opacity = '1';
+                    svgRows.style.opacity = '0.5';
+                    
+                    // Показываем карточки выбранной категории
                     showCards(currentCategory, currentView);
                 } else {
                     dropdown.querySelectorAll('.active').forEach(cb => {
@@ -81,42 +143,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    function showCards(category, view) {
-        Object.values(cardGroups).forEach(group => {
-            group.forEach(card => {
-                card.style.display = 'none';
-            });
-        });
-        
-        if (cardGroups[category]) {
-            cardGroups[category].forEach(card => {
-                card.style.display = view === 'square' ? 'block' : 'flex';
-                card.classList.toggle('col-8', view === 'horizontal');
-                card.classList.toggle('col-4', view === 'square');
-                
-                if (view === 'horizontal') {
-                    card.style.width = '100%';
-                    card.style.maxWidth = '100%';
-                } else {
-                    card.style.width = '18rem';
-                    card.style.maxWidth = '18rem';
-                }
-            });
-        }
-    }
-    
     svgGrid.addEventListener('click', function() {
-        currentView = 'square';
-        svgGrid.style.opacity = '1';
-        svgRows.style.opacity = '0.5';
-        showCards(currentCategory, currentView);
+        updateView('square');
     });
     
     svgRows.addEventListener('click', function() {
-        currentView = 'horizontal';
-        svgGrid.style.opacity = '0.5';
-        svgRows.style.opacity = '1';
-        showCards(currentCategory, currentView);
+        // Для категории "Шкафы" горизонтальные карточки будут показаны только при нажатии
+        updateView('horizontal');
     });
     
     svgGrid.style.cursor = 'pointer';
@@ -124,5 +157,6 @@ document.addEventListener('DOMContentLoaded', function() {
     svgGrid.style.opacity = '1';
     svgRows.style.opacity = '0.5';
     
+    // Инициализация: показываем только шкафы в квадратном виде
     showCards(currentCategory, currentView);
 });

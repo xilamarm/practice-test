@@ -995,7 +995,8 @@ p {
 
 .buttons-place  {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 5%;
     align-items: center;
 }
 
@@ -1047,6 +1048,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding: 0;
 }
 
 .card-choice {
@@ -1387,5 +1389,121 @@ p {
 }
 
 .card-choice {
-    animation: fadeIn 0.5s ease-out;
+    margin-bottom: 30px;
+    background-color: var(--color-three);
+    border: 1px solid #343a40;
+    overflow: hidden;
+    display: none;
+}
+
+.card-choice:not(.card-choice-gorizontal) {
+    width: 18rem;
+    max-width: 18rem;
+    flex: 0 0 auto;
+}
+
+.card-choice-gorizontal {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    background-color: #1a1d20;
+}
+
+.card-choice:not(.card-choice-gorizontal) .card-img-top {
+    height: 250px;
+}
+
+.card-choice-gorizontal .card-img-top {
+    width: 40%;
+    height: 200px;
+}
+
+.card-body-choice,
+.card-body-gorizontal {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-top: 1px solid #343a40;
+}
+
+.card-body-gorizontal {
+    width: 60%;
+}
+
+.main-choice-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .main-choice-section {
+        gap: 20px;
+        padding: 15px;
+    }
+    
+    .card-choice:not(.card-choice-gorizontal) {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .card-choice-gorizontal {
+        flex-direction: column;
+    }
+    
+    .card-choice-gorizontal .card-img-top {
+        width: 100%;
+        height: 250px;
+    }
+    
+    .card-body-gorizontal {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .card-img-top {
+        height: 200px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .main-choice-section {
+        gap: 25px;
+    }
+    
+    .card-choice:not(.card-choice-gorizontal) {
+        width: calc(50% - 12px);
+        max-width: calc(50% - 12px);
+    }
+}
+
+@media (min-width: 993px) {
+    .card-choice:not(.card-choice-gorizontal) {
+        width: calc(33.333% - 20px);
+        max-width: calc(33.333% - 20px);
+    }
+}
+
+.card-choice-gorizontal {
+    display: none !important;
+}
+
+.card-choice-gorizontal[style*="display: flex"] {
+    display: flex !important;
+}
+
+.card-choice-gorizontal[style*="display: block"] {
+    display: block !important;
 }

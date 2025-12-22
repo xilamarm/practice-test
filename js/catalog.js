@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const svgRows = document.querySelector('.svg-choice-place svg:nth-child(2)');
     const mainSection = document.querySelector('.main-choice-section');
     
-    let currentView = 'square'; // Только квадратный вид по умолчанию
-    let currentCategory = 'shkaf'; // Шкафы выбраны по умолчанию
+    let currentView = 'square';
+    let currentCategory = 'shkaf';
     
     const allSquareCards = mainSection.querySelectorAll('.card-choice:not(.card-choice-gorizontal)');
     const allHorizontalCards = mainSection.querySelectorAll('.card-choice-gorizontal');
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function showCards(category, view) {
-        hideAllCards(); // Сначала скрываем ВСЕ карточки
+        hideAllCards(); 
         
         const cardsToShow = cardGroups[category];
         
@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     card.style.display = 'block';
                 });
             } else if (view === 'horizontal') {
-                // Для горизонтального вида показываем только горизонтальные карточки
                 cardsToShow.horizontal.forEach(card => {
                     card.style.display = 'flex';
                 });
@@ -53,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
         currentView = view;
         showCards(currentCategory, currentView);
         
-        // Обновляем стили SVG
         if (view === 'square') {
             svgGrid.style.opacity = '1';
             svgRows.style.opacity = '0.5';
@@ -63,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Инициализация: скрываем все горизонтальные карточки по умолчанию
+
     allHorizontalCards.forEach(card => {
         card.style.display = 'none';
     });
@@ -103,17 +101,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     checkbox.checked = true;
                     button.textContent = link.textContent;
                     
-                    // Обновляем текущую категорию
+
                     if (link.textContent === 'Шкаф') currentCategory = 'shkaf';
                     if (link.textContent === 'Прихожии') currentCategory = 'prikhozhia';
                     if (link.textContent === 'Кухни') currentCategory = 'kukhni';
                     
-                    // Всегда показываем квадратный вид при смене категории
+
                     currentView = 'square';
                     svgGrid.style.opacity = '1';
                     svgRows.style.opacity = '0.5';
                     
-                    // Показываем карточки выбранной категории
+
                     showCards(currentCategory, currentView);
                 } else {
                     dropdown.querySelectorAll('.active').forEach(cb => {
@@ -148,7 +146,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     svgRows.addEventListener('click', function() {
-        // Для категории "Шкафы" горизонтальные карточки будут показаны только при нажатии
         updateView('horizontal');
     });
     
@@ -157,6 +154,5 @@ document.addEventListener('DOMContentLoaded', function() {
     svgGrid.style.opacity = '1';
     svgRows.style.opacity = '0.5';
     
-    // Инициализация: показываем только шкафы в квадратном виде
     showCards(currentCategory, currentView);
 });

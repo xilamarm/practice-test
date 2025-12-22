@@ -775,7 +775,6 @@ p {
 
 }
 
-/* конец index.html */
 
 .divan-one {
     position: absolute;
@@ -989,9 +988,6 @@ p {
         margin-bottom: 40px;
     }
 }
-
-/* каталог */
-
 
 .buttons-place  {
     display: flex;
